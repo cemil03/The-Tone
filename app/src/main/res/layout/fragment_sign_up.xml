@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_SP"
+    android:gravity="fill_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/music_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/sign_up_header"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@color/gray"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColorHint="@color/suva_gray" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColorHint="@color/suva_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/suva_gray"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/suva_gray">
+
+        <EditText
+            android:id="@+id/btnLogin"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:hint="@string/password"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/suva_gray"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/suva_gray">
+
+        <EditText
+            android:id="@+id/btnConfirmLogin"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:hint="@string/confirm_password"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/etPassword"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_up_header"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MP3</string>
+    <string name="music_for_everyone">Music for everyone</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log in</string>
+    <string name="do_not_have_an_account">DON\'T HAVE AN ACCOUNT?</string>
+    <string name="sign_up">SIGNUP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_header">Sign Up</string>
+    <string name="playing_from_your_library">Playing From Yout Library</string>
+    <string name="riptide">Riptide</string>
+    <string name="vance_joy">Vance Joy</string>
+    <string name="start_time">0.00</string>
+    <string name="end_time">3.24</string>
+</resources>
