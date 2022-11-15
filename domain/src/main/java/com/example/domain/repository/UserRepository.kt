@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
     suspend fun insertUser(user: User)
-    fun getUserData(): Flow<List<User>>
+    fun loginUser(userName: String, password: String): Flow<List<User>>
 }

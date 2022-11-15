@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.mp3.LoginFragment"
+        android:name="com.example.mp3.presentation.authorization.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.mp3.SignUpFragment"
+        android:name="com.example.mp3.presentation.authorization.signUp.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/musicFragment"
-        android:name="com.example.mp3.MusicFragment"
+        android:name="com.example.mp3.presentation.main.MusicFragment"
         android:label="fragment_music"
         tools:layout="@layout/fragment_music" />
 </navigation>

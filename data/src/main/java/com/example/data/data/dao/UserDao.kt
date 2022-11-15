@@ -10,10 +10,9 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM User")
-    fun getDataUser() : Flow<List<UserEntity>>
+    @Query("SELECT * FROM User WHERE userName LIKE :userName AND password LIKE :password")
+    fun loginUser(userName: String, password: String): Flow<List<UserEntity>>
 
     @Insert
     suspend fun insertUser(user: UserEntity)
-
 }

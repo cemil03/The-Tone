@@ -1,4 +1,4 @@
-package com.example.mp3
+package com.example.mp3.presentation.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,16 +21,6 @@ class MusicFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.sbSong.setOnSeekBarChangeListener(object :
-            SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {}
-            override fun onStartTrackingTouch(p0: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar) {}
-        })
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

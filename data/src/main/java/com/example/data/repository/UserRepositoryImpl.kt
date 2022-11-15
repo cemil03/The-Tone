@@ -15,8 +15,8 @@ class UserRepositoryImpl(
         dao.insertUser(userMapper.mapToEntity(user))
     }
 
-    override fun getUserData(): Flow<List<User>> {
-        return dao.getDataUser()
+    override fun loginUser(userName: String, password: String): Flow<List<User>> {
+        return dao.loginUser(userName, password)
             .map { listOfUserEntities ->
                 listOfUserEntities.map {
                     userMapper.mapFromEntity(it)
