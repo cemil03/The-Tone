@@ -6,24 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.mp3.R
 import com.example.mp3.databinding.FragmentMusicBinding
 
 
-class MusicFragment : Fragment() {
-    private var _binding: FragmentMusicBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentMusicBinding.inflate(inflater)
-        return binding.root
-    }
+class MusicFragment : Fragment(R.layout.fragment_music) {
+    private val binding: FragmentMusicBinding by viewBinding()
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
