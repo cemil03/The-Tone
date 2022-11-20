@@ -5,7 +5,7 @@ import com.example.domain.repository.UserRepository
 import kotlinx.coroutines.flow.Flow
 
 class LoginUserUseCase(private val userRepository: UserRepository) {
-    fun execute(userName:String, password: String ): Flow<List<User>> {
+    suspend fun execute(userName:String, password: String ): User? {
         return userRepository.loginUser(userName, password)
     }
 }

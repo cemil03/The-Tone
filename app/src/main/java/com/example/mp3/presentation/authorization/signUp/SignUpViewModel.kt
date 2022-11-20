@@ -6,9 +6,11 @@ import androidx.lifecycle.ViewModel
 import com.example.domain.usecase.RegisterUserUseCase
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
+import com.example.data.module.InfoUserModule
 import com.example.domain.entity.User
 import kotlinx.coroutines.launch
 import java.util.regex.Pattern
+
 
 class SignUpViewModel(private val registerUserUseCase: RegisterUserUseCase) : ViewModel() {
 
@@ -24,8 +26,10 @@ class SignUpViewModel(private val registerUserUseCase: RegisterUserUseCase) : Vi
     private val _errorToastPasswordConfirm: MutableLiveData<Boolean> = MutableLiveData()
     val errorToastPasswordConfirm: LiveData<Boolean> get() = _errorToastPasswordConfirm
 
-    private val _successSignUpEvent: MutableLiveData<Boolean> = MutableLiveData()
-    val successSignUpEvent: LiveData<Boolean> get() = _successSignUpEvent
+    private val _successSignUpEvent: MutableLiveData<InfoUserModule> = MutableLiveData()
+    val successSignUpEvent: LiveData<InfoUserModule> get() = _successSignUpEvent
+
+
 
     fun validateInputs(
         userName: String,
@@ -42,7 +46,7 @@ class SignUpViewModel(private val registerUserUseCase: RegisterUserUseCase) : Vi
                 confirmPassword
             ) -> _errorToastPasswordConfirm.value = true
             else -> {
-                _successSignUpEvent.value = true
+                _successSignUpEvent.value = InfoUserModule(userName, email)
             }
         }
     }
