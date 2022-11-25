@@ -20,4 +20,5 @@ class MainApp : Application() {
             modules(listOf(appModule, domainModule, dataModule))
         }
     }
+
 }

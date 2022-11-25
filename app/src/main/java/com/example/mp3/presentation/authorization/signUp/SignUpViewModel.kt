@@ -38,7 +38,7 @@ class SignUpViewModel(private val registerUserUseCase: RegisterUserUseCase) : Vi
         confirmPassword: String
     ) {
         when {
-            userName.isEmpty() -> _errorToastEmail.value = true
+            userName.isEmpty() -> _errorToastUserName.value = true
             !isValidateEmail(email) -> _errorToastEmail.value = true
             !isValidatePassword(password) -> _errorToastPassword.value = true
             !isValidateConfirmPassword(
@@ -62,13 +62,13 @@ class SignUpViewModel(private val registerUserUseCase: RegisterUserUseCase) : Vi
 
     fun registerUser(user: User) {
         viewModelScope.launch {
-            registerUserUseCase.execute(user)
+            registerUserUseCase(user)
         }
     }
 
     companion object {
         const val PASSWORD_PATTERN =
-            "^(?=(?:.*[a-z]){3})(?=(?:.*[A-Z]){2})(?=.*[?!@#*%^&-+])(?=(?:.*\\d){2})[a-zA-Z?!@#*%^&-+\\d]{8}\$"
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@\$%^&()\\[\\]{:;<>,?/~_+\\-=|]).{8,64}$"
     }
 
 

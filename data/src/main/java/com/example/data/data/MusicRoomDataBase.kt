@@ -11,4 +11,5 @@ import com.example.data.data.entity.UserEntity
 abstract class MusicRoomDataBase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
+
 }

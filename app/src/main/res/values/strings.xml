@@ -11,16 +11,16 @@
     <string name="Email">Email</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up_header">Sign Up</string>
-    <string name="playing_from_your_library">Playing From Yout Library</string>
+    <string name="playing_from_your_library">Playing From Your Library</string>
     <string name="riptide">Riptide</string>
     <string name="vance_joy">Vance Joy</string>
     <string name="start_time">0.00</string>
     <string name="end_time">3.24</string>
-
+    <string name="music_database">Music DataBase</string>
     <!--fragment_sign_up.xml-->
     <string name="fragment_sign_up_error_empty_user_name">Please enter your user name</string>
     <string name="fragment_sign_up_error_email">An email address must contain a single @</string>
-    <string name="fragment_sign_up_error_password">Password must be 8+ characters and at least one uppercase letter, a number, and a special character (\$, #, !)</string>
+    <string name="fragment_sign_up_error_password">Password must be 8+ characters, one uppercase letter, a number, and a special char</string>
     <string name="fragment_sign_up_error_confirm_password">Password and confirm must be the same</string>
 
     <!--fragment_login.xml-->
